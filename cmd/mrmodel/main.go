@@ -16,17 +16,6 @@ func main() {
 
 	subcommand := os.Args[1]
 	switch subcommand {
-	case "dump-db":
-		if _, err := lib.DumpIntegrationTokens(); err != nil {
-			log.Fatalf("failed to dump integration_tokens: %v", err)
-		}
-	case "github":
-		if err := runGitHub(os.Args[2:]); err != nil {
-			log.Fatalf("github command failed: %v", err)
-		}
-	case "bitbucket":
-		if err := runBitbucket(os.Args[2:]); err != nil {
-			log.Fatalf("bitbucket command failed: %v", err)
 		}
 	case "gitlab":
 		if err := runGitLab(os.Args[2:]); err != nil {
