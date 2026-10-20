@@ -13,14 +13,7 @@ func main() {
 		printUsage()
 		return
 	}
-
-	subcommand := os.Args[1]
-	switch subcommand {
-		}
-	case "gitlab":
-		if err := runGitLab(os.Args[2:]); err != nil {
-			log.Fatalf("gitlab command failed: %v", err)
-		}
+ 
 	default:
 		printUsage()
 		os.Exit(1)
